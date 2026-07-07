@@ -119,6 +119,31 @@ export default function Home() {
               api.sigaacaiu.com
             </a>
           </div>
+          <div className="space-y-1">
+            <p>Esse sigaacaiu e da UFPB. Procurando por outros? Acesse abaixo:</p>
+            <ul className="flex flex-col items-center">
+              <li>
+                <a
+                  href="https://ufg.sigaacaiu.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-neutral-600 transition-colors"
+                >
+                  UFG
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://unb.sigaacaiu.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-neutral-600 transition-colors"
+                >
+                  UNB
+                </a>
+              </li>
+            </ul>
+          </div>
         </footer>
       </section>
     </>
