@@ -131,6 +131,7 @@ Instancias do projeto rodando por ai:
 |---|---|
 | UFPB | [sigaacaiu.com](https://sigaacaiu.com) |
 | UFG | [ufg.sigaacaiu.com](https://ufg.sigaacaiu.com) |
+| UNB | [unb.sigaacaiu.com](https://unb.sigaacaiu.com) |
 
 Quer um monitor desses pra sua universidade? Me chame em **tiagotrindade03@gmail.com** ou abra uma [issue](https://github.com/trindadetiago/sigaa-caiu/issues) — fico feliz em ajudar e adicionar sua UF na lista.
 
