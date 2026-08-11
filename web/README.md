@@ -26,12 +26,14 @@ src/
 ```bash
 npm install
 
-# Usar a API publicada em producao
+# Usar a API publicada em produção
 npm run dev
 
 # Ou apontar pro worker local se quiser testar o backend local
 NEXT_PUBLIC_API_URL=http://localhost:8787 npm run dev
 ```
+
+Por padrão, o frontend usa a API do worker publicado. Use `NEXT_PUBLIC_API_URL=http://localhost:8787` apenas quando estiver rodando o backend localmente.
 
 O frontend roda em `http://localhost:3000`.
 

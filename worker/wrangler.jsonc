@@ -3,10 +3,6 @@
   "account_id": "78363355cf1b7b94f6a8e75c6b38850d",
   "main": "src/index.ts",
   "compatibility_date": "2024-09-23",
-  "placement": {
-    "mode": "smart",
-    "hint": "sam"
-  },
   "triggers": {
     "crons": ["* * * * *"]
   },
@@ -14,7 +10,7 @@
     {
       "binding": "DB",
       "database_name": "sigaa-caiu-db",
-      "database_id": "99717d91-0563-4319-b9ad-2e2700bbe9d5"
+      "database_id": "b4dcacdb-f347-4463-a43f-73c3dff0a57e"
     }
   ],
   "observability": {
