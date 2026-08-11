@@ -85,7 +85,7 @@ export default function Home() {
       {/* Detalhes — abaixo da dobra */}
       <section className="max-w-2xl mx-auto px-4 py-16 space-y-10">
         <p className="text-sm text-neutral-400 text-center">
-          Monitor do SIGAA (Sistema Integrado de Gestao de Atividades Academicas) da UFPB.
+          Monitor do SIGAA (Sistema Integrado de Gestao de Atividades Academicas) do IFPA.
           Verificamos automaticamente se o sistema esta no ar, lento ou fora do ar a cada 3 minutos
           com 4 camadas: acesso ao servidor, portal publico, tela de login e login completo.
         </p>
@@ -120,8 +120,8 @@ export default function Home() {
             </a>
           </div>
           <div className="space-y-1">
-            <p>Esse sigaacaiu e da UFPB. Procurando por outros? Acesse abaixo:</p>
-            <ul className="flex flex-col items-center">
+            <p>Esse sigaacaiu e do IFPA. Procurando por outros? Acesse abaixo:</p>
+            <ul className="flex flex-col items-center gap-2">
               <li>
                 <a
                   href="https://ufg.sigaacaiu.com"
@@ -140,6 +140,16 @@ export default function Home() {
                   className="text-neutral-400 hover:text-neutral-600 transition-colors"
                 >
                   UNB
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.sigaacaiu.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-neutral-600 transition-colors"
+                >
+                  UFPB
                 </a>
               </li>
             </ul>
