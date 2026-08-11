@@ -85,7 +85,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
     return (
       <div className="text-center">
         <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-6">
-          SIGAA IFPA Caiu?
+          SIGAA do IFPA Caiu?
         </h1>
         <p className="text-2xl text-neutral-400">
           Sei la, a gente tambem ta com problema
@@ -101,7 +101,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
     return (
       <div className="text-center">
         <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-6">
-          SIGAA IFPA Caiu?
+          SIGAA do IFPA Caiu?
         </h1>
         <p className="text-2xl text-neutral-400 animate-pulse">
           Verificando...
