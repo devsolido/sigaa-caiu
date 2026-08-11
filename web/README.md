@@ -26,12 +26,11 @@ src/
 ```bash
 npm install
 
-# Apontar pra API de producao
-NEXT_PUBLIC_API_URL=https://sigaa-caiu-worker.sigaa-caiu.workers.dev npm run dev
-
-# Ou apontar pro worker local
+# Usar a API publicada em producao
 npm run dev
-# (usa http://localhost:8787 como fallback)
+
+# Ou apontar pro worker local se quiser testar o backend local
+NEXT_PUBLIC_API_URL=http://localhost:8787 npm run dev
 ```
 
 O frontend roda em `http://localhost:3000`.
