@@ -15,6 +15,19 @@ export async function handleApiRequest(
   const url = new URL(request.url);
   const path = url.pathname;
 
+  // Rota temporária para forçar verificação manual
+  if (path === "/force-check") {
+    const { performHealthCheck } = await import("./health");
+    const { saveCheck, getLastNChecks, manageIncidents } = await import("./db");
+    
+    const result = await performHealthCheck(env, true);
+    await saveCheck(env.DB, result);
+    const lastChecks = await getLastNChecks(env.DB, 2);
+    await manageIncidents(env.DB, result, lastChecks);
+    
+    return json(result);
+  }
+
   if (path === "/api/status") {
     return handleStatus(env);
   }
@@ -105,12 +118,25 @@ async function handleIncidents(env: Env): Promise<Response> {
   return json({ incidents });
 }
 
+// Endpoint temporário para forçar verificação manual
+export async function handleForceCheck(env: Env): Promise<Response> {
+  const { performHealthCheck } = await import("./health");
+  const { saveCheck, getLastNChecks, manageIncidents } = await import("./db");
+  
+  const result = await performHealthCheck(env, true);
+  await saveCheck(env.DB, result);
+  const lastChecks = await getLastNChecks(env.DB, 2);
+  await manageIncidents(env.DB, result, lastChecks);
+  
+  return json(result);
+}
+
 const DOCS_HTML = `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SIGAA Caiu? — API</title>
+<title>SIGAA IFPA Caiu? — API</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: system-ui, -apple-system, sans-serif; background: #fafafa; color: #171717; line-height: 1.6; padding: 2rem; max-width: 720px; margin: 0 auto; }
@@ -133,8 +159,8 @@ const DOCS_HTML = `<!DOCTYPE html>
 </style>
 </head>
 <body>
-<h1>SIGAA Caiu? API</h1>
-<p class="sub">API publica do monitor de status do SIGAA da UFPB. Sem autenticacao.<br><a href="https://sigaacaiu.com">sigaacaiu.com</a> · <a href="https://github.com/trindadetiago/sigaa-caiu">GitHub</a></p>
+<h1>SIGAA IFPA Caiu? API</h1>
+<p class="sub">API publica do monitor de status do SIGAA do IFPA. Sem autenticacao.<br><a href="https://sigaacaiu.com">sigaacaiu.com</a> · <a href="https://github.com/trindadetiago/sigaa-caiu">GitHub</a></p>
 
 <h2><span class="method">GET</span> <code>/api/status</code></h2>
 <div class="endpoint">
@@ -221,7 +247,7 @@ const DOCS_HTML = `<!DOCTYPE html>
 </div>
 
 <footer>
-  Verifica o SIGAA a cada 3 minutos com 4 camadas de verificacao · <a href="https://github.com/trindadetiago/sigaa-caiu">GitHub</a>
+  Verifica o SIGAA do IFPA a cada 3 minutos com 4 camadas de verificacao · <a href="https://github.com/trindadetiago/sigaa-caiu">GitHub</a>
 </footer>
 </body>
 </html>`;

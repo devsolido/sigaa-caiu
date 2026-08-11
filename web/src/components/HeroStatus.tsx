@@ -15,7 +15,7 @@ function pickRandom<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// "O SIGAA caiu?" → Não! (ta online)
+// "SIGAA IFPA Caiu?" → Não! (ta online)
 const ONLINE_RESPONSES = [
   { emoji: "👍", text: "Nao!", sub: "Milagrosamente funcionando." },
   { emoji: "👍", text: "Nao, ta no ar!", sub: "Aproveita enquanto dura." },
@@ -25,7 +25,7 @@ const ONLINE_RESPONSES = [
   { emoji: "👍", text: "Nao!", sub: "Nao, voce nao ta sonhando." },
 ];
 
-// "O SIGAA caiu?" → Ainda não, mas ta lento...
+// "SIGAA IFPA Caiu?" → Ainda não, mas ta lento...
 const SLOW_RESPONSES = [
   { emoji: "🐌", text: "Ainda nao, mas...", sub: "Ta taaao lento que ja ja cai..." },
   { emoji: "😮‍💨", text: "Nao, mas quase", sub: "Ta mais lento que fila do RU." },
@@ -34,7 +34,7 @@ const SLOW_RESPONSES = [
   { emoji: "🦥", text: "Nao, mas ta arrastando", sub: "Mais lento que matricula em periodo." },
 ];
 
-// "O SIGAA caiu?" → Sim!
+// "SIGAA IFPA Caiu?" → Sim!
 const DOWN_RESPONSES = [
   { emoji: "👎", text: "Sim, caiu", sub: "F no chat. Vai tomar um cafe e volta depois." },
   { emoji: "💀", text: "Sim, morreu", sub: "Descanse em paz, SIGAA." },
@@ -85,7 +85,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
     return (
       <div className="text-center">
         <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-6">
-          O SIGAA caiu?
+          SIGAA IFPA Caiu?
         </h1>
         <p className="text-2xl text-neutral-400">
           Sei la, a gente tambem ta com problema
@@ -101,7 +101,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
     return (
       <div className="text-center">
         <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-6">
-          O SIGAA caiu?
+          SIGAA IFPA Caiu?
         </h1>
         <p className="text-2xl text-neutral-400 animate-pulse">
           Verificando...
@@ -120,7 +120,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
   return (
     <div className="text-center">
       <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-8">
-        O SIGAA caiu?
+        SIGAA IFPA Caiu?
       </h1>
 
       <div className="text-6xl sm:text-8xl mb-4">{response.emoji}</div>
@@ -136,7 +136,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
 
       {daysSinceLastIncident !== null && daysSinceLastIncident > 0 && data.status !== "offline" && (
         <p className="mt-6 text-sm text-neutral-400">
-          Estamos a <span className="font-semibold text-neutral-600">{daysSinceLastIncident} {daysSinceLastIncident === 1 ? "dia" : "dias"}</span> sem o SIGAA cair
+          Estamos a <span className="font-semibold text-neutral-600">{daysSinceLastIncident} {daysSinceLastIncident === 1 ? "dia" : "dias"}</span> sem o SIGAA IFPA cair
           <span className="ml-1 text-neutral-300">#iLoveSigaa</span>
         </p>
       )}
@@ -146,4 +146,4 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
       </p>
     </div>
   );
-}
+}''
