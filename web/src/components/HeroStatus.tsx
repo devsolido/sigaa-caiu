@@ -21,7 +21,7 @@ const ONLINE_RESPONSES = [
   { emoji: "👍", text: "Nao, ta no ar!", sub: "Aproveita enquanto dura." },
   { emoji: "🎉", text: "Nao!", sub: "Inacreditavel, mas ta funcionando." },
   { emoji: "👍", text: "Nao, pode ir!", sub: "Corre antes que caia." },
-  { emoji: "🙏", text: "Nao!", sub: "Gracas a Deus e a STI." },
+  { emoji: "🙏", text: "Nao!", sub: "Gracas a Deus e a DTI." },
   { emoji: "👍", text: "Nao!", sub: "Nao, voce nao ta sonhando." },
 ];
 
@@ -31,7 +31,7 @@ const SLOW_RESPONSES = [
   { emoji: "😮‍💨", text: "Nao, mas quase", sub: "Ta mais lento que fila do RU." },
   { emoji: "🐢", text: "Mais ou menos", sub: "Ta funcionando em camara lenta." },
   { emoji: "⏳", text: "Nao... ainda", sub: "Pega um cafe enquanto carrega." },
-  { emoji: "🦥", text: "Nao, mas ta arrastando", sub: "Mais lento que matricula em periodo." },
+  { emoji: "🦥", text: "Nao, mas ta arrastando", sub: "Mais lento que esperar o IFPA responder e-mail." },
 ];
 
 // "SIGAA IFPA Caiu?" → Sim!
@@ -120,7 +120,7 @@ export function HeroStatus({ data, error, daysSinceLastIncident, incidents }: Pr
   return (
     <div className="text-center">
       <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-8">
-        SIGAA IFPA Caiu?
+        SIGAA do IFPA Caiu?
       </h1>
 
       <div className="text-6xl sm:text-8xl mb-4">{response.emoji}</div>
